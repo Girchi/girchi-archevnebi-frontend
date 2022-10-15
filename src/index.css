@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #E5E5E5;
+}
+
+@font-face {
+    font-family: 'TBCContractica';
+    src:  url('./assets/font/TBCContractica-Regular.ttf')
+}
+
+@layer base {
+
+    p,h1,h2,h3,h4,h5,h6,a{
+        font-family: 'TBCContractica';
+    }
+}
