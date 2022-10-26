@@ -58,9 +58,9 @@ const MyPoliticalListMain = () => {
                                 <div className="mt-1.5 flex border-[1px] justify-between rounded-md py-3.5 px-3 text-sm">
                                     <input className="w-1/2 focus:outline-0 text-[Inter] text-sm text-lightBlack font-medium" type="text" placeholder="92 000 GED"/>
                                     <div className="flex">
-                                        <label htmlFor="small-toggle" className="cursor-pointer font-[TBCContractica] text-sm text-lightGray mr-2.5">პროცენტი</label>
-                                        <label htmlFor="small-toggle" className="inline-flex relative items-center cursor-pointer">
-                                            <input type="checkbox" value="" id="small-toggle" className="sr-only peer" />
+                                        <label htmlFor="small-toggle2" className="cursor-pointer font-[TBCContractica] text-sm text-lightGray mr-2.5">პროცენტი</label>
+                                        <label htmlFor="small-toggle2" className="inline-flex relative items-center cursor-pointer">
+                                            <input type="checkbox" value="" id="small-toggle2" className="sr-only peer" />
                                             <div className="w-9 h-5 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-[#1A8917]"></div>
                                         </label>
                                     </div>     

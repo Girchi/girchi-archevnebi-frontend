@@ -1,11 +1,13 @@
 import AutorizationSideBar from "./AutorizationSideBar";
 import LogInSIdeBar from "./LogInSIdeBar";
 
-const SideBar = () => {
+const SideBar = ({user, setNavigateSideBar}) => {
+
+
+
     return (  
         <>
-        {/* <AutorizationSideBar /> */}
-        <LogInSIdeBar />
+        {user ? <LogInSIdeBar setNavigateSideBar={setNavigateSideBar}  /> : <AutorizationSideBar /> }     
         </>
     );
 }
