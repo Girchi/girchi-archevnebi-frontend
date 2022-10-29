@@ -1,11 +1,6 @@
 const SearchSuggestions = ({list, profilePictureList, setChosen, setList, setProfilePictureList}) => {
 
     const noPicture = 'https://www.girchi.com/sites/default/files/avatars/2022-09/_1009237373362919.jpg';
-    // const list = props.list;
-    // const profilePictureList = props.profilePictureList;
-    // const setChosen = props.setChosen;
-    // const setList = props.setList;
-    // const setProfilePictureList = props.setProfilePictureList;
     const checkPicture = id => {
         const filtered = profilePictureList.filter(item => item.id===id)[0];
         if(filtered) {
@@ -15,7 +10,6 @@ const SearchSuggestions = ({list, profilePictureList, setChosen, setList, setPro
         }
     }
 
-    console.log("Signit listiii",list)
 
     const handleClick = (item, pic) => {
         setChosen([item, pic]);

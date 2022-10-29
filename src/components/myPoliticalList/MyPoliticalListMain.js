@@ -1,7 +1,13 @@
+import { useState } from "react";
 import photo from "../../assets/images/profile.jpeg"
 import AddCandidate from "./myPoliticalListMainComponents/AddCandidate";
 
 const MyPoliticalListMain = () => {
+
+  const [chosen, setChosen] = useState(null);
+
+  console.log("archeuli candidati", chosen)
+
     return (
         <>
             {/* list */}
@@ -76,7 +82,7 @@ const MyPoliticalListMain = () => {
                     </div>
                 </div>
 
-                <AddCandidate />
+                <AddCandidate setChosen={setChosen} />
             </div>
         </>
     )

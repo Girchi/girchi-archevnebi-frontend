@@ -3,16 +3,12 @@ import SearchInput from "./SearchInput";
 import SearchSuggestions from "./SearchSuggestions";
 import SupportAmount from "./SupportAmount";
 
-const AddCandidate = () => {
+const AddCandidate = ({setChosen}) => {
 
 
     const [search, setSearch] = useState('');
     const [list, setList] = useState(null);
     const [profilePictureList, setProfilePictureList] = useState(null);
-    const [chosen, setChosen] = useState(null);
-
-    console.log('listii', list)
-    // console.log(">>>>>>>>",list.length);
 
     return (  
         <div className= "w-full border-t-2 flex py-6  items-start justify-between text-lightBlack font-[TBCContractica] text-xs font-medium">
