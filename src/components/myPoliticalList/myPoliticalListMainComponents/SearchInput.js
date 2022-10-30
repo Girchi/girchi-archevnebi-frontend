@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { retrieve } from "../../../utils/retrieve";
 import { termToUrl } from "../../../utils/termToUrl";
 
-const SearchInput = ({search, setSearch, setList, setProfilePictureList}) => {
+const SearchInput = ({chosen, setList, setProfilePictureList}) => {
+
+    const [search, setSearch] = useState('');
+
 
     useEffect(() => {
         const timeOutId = setTimeout(() => searchUsers(search), 500);
@@ -27,7 +30,7 @@ const SearchInput = ({search, setSearch, setList, setProfilePictureList}) => {
         }
     }
 
-
+    const inputValue = chosen ? `${chosen[0]['attributes']['field_first_name']}  ${chosen[0]['attributes']['field_last_name']}` : search;
 
   return (
     <div className="flex w-[330px] ml-3 mr-28 flex-col">
@@ -36,11 +39,11 @@ const SearchInput = ({search, setSearch, setList, setProfilePictureList}) => {
             className="search flex w-full justify-between items-center p-[10px] gap-[8px] bg-white border-solid border border-bgGray 
             rounded-md h-[50px] placeholder:font-medium placeholder:text-sm placeholder:leading-4"
             type="text"
-            placeholder="სახელი-გვარი"
+            placeholder="სახელი და გვარი"
             name="userName"
             required
-            value={search}
-            onChange={e => setSearch(e.target.value)}
+            value={inputValue}
+            onChange={(e) => setSearch(e.target.value)}
         />
       
     </div>

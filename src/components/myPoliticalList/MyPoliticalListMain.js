@@ -5,6 +5,7 @@ import AddCandidate from "./myPoliticalListMainComponents/AddCandidate";
 const MyPoliticalListMain = () => {
 
   const [chosen, setChosen] = useState(null);
+  
 
   console.log("archeuli candidati", chosen)
 
@@ -82,7 +83,7 @@ const MyPoliticalListMain = () => {
                     </div>
                 </div>
 
-                <AddCandidate setChosen={setChosen} />
+                <AddCandidate chosen={chosen} setChosen={setChosen} />
             </div>
         </>
     )

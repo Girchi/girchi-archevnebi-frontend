@@ -3,12 +3,13 @@ import SearchInput from "./SearchInput";
 import SearchSuggestions from "./SearchSuggestions";
 import SupportAmount from "./SupportAmount";
 
-const AddCandidate = ({setChosen}) => {
+const AddCandidate = ({chosen, setChosen}) => {
 
 
-    const [search, setSearch] = useState('');
     const [list, setList] = useState(null);
     const [profilePictureList, setProfilePictureList] = useState(null);
+
+    console.log(list)
 
     return (  
         <div className= "w-full border-t-2 flex py-6  items-start justify-between text-lightBlack font-[TBCContractica] text-xs font-medium">
@@ -22,7 +23,7 @@ const AddCandidate = ({setChosen}) => {
             </div>
 
             <div className="flex flex-col items-start">
-                <SearchInput search={search} setSearch={setSearch} setList={setList} setProfilePictureList={setProfilePictureList} />
+                <SearchInput chosen={chosen} setList={setList} setProfilePictureList={setProfilePictureList} />
             
                 { list && list.length>0 && <SearchSuggestions 
                             list={list} setList={setList} setChosen={setChosen}
